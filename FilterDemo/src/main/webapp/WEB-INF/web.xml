@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         metadata-complete="true">
+
+    <servlet>
+        <servlet-name>display</servlet-name>
+        <servlet-class>org.syh.servlet.DisplayServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>display</servlet-name>
+        <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>display</servlet-name>
+        <url-pattern>/filter/display</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>filter</filter-name>
+        <filter-class>org.syh.filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter</filter-name>
+        <url-pattern>/filter/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.syh.listener.CountListener</listener-class>
+    </listener>
+
+    <session-config>
+        <session-timeout>1</session-timeout>
+    </session-config>
+</web-app>

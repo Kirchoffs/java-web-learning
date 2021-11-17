@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         metadata-complete="true">
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>https://www.google.com</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>write</servlet-name>
+        <servlet-class>org.syh.servlet.WriteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>write</servlet-name>
+        <url-pattern>/write</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>read</servlet-name>
+        <servlet-class>org.syh.servlet.ReadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>read</servlet-name>
+        <url-pattern>/read</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextParam</servlet-name>
+        <servlet-class>org.syh.servlet.ContextParamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextParam</servlet-name>
+        <url-pattern>/ContextParam</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextDispatch</servlet-name>
+        <servlet-class>org.syh.servlet.ContextDispatchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextDispatch</servlet-name>
+        <url-pattern>/ContextDispatch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PropertiesServlet</servlet-name>
+        <servlet-class>org.syh.servlet.PropertiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PropertiesServlet</servlet-name>
+        <url-pattern>/PropertiesServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
